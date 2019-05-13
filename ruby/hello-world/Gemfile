@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+group :development, :test do
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'rb-readline'
+end

@@ -1,0 +1,12 @@
+guard :minitest, test_folders: '.' do
+  watch(%r{^(.*/)?([^/]+)\.rb$})  do |match_data|
+
+    test_file = if match_data[2].include? "test"
+                  match_data[2].split('_').first
+                else
+                  match_data[2]
+                end
+
+    "./#{test_file}_test.rb"
+  end
+end
